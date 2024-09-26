@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Registros</title>
+</head>
+<body>
+    <h1>Lista de Registros</h1>
+    <ul>
+        {% for registro in registros %}
+            <li>
+                <a href="{% url 'registro_detalle' registro.pk %}">
+                    {{ registro.trabajador.nombre }} {{ registro.trabajador.apellido }} - {{ registro.fecha }}
+                </a>
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

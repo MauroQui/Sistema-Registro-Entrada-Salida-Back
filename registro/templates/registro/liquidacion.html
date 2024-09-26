@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Liquidación Mensual</title>
+</head>
+<body>
+    <h1>Liquidación del Mes</h1>
+
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Trabajador</th>
+                <th>Total Horas Trabajadas</th>
+                <th>Liquidación</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for liquidacion in liquidaciones %}
+            <tr>
+                <td>{{ liquidacion.trabajador.nombre }} {{ liquidacion.trabajador.apellido }}</td>
+                <td>{{ liquidacion.total_horas }}</td>
+                <td>${{ liquidacion.liquidacion }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+</body>
+</html>

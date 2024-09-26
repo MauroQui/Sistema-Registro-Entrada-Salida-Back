@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Trabajadores</title>
+</head>
+<body>
+    <h1>Lista de Trabajadores</h1>
+    <ul>
+        {% for trabajador in trabajadores %}
+            <li>
+                <a href="{% url 'trabajador_detalle' trabajador.pk %}">{{ trabajador.nombre }} {{ trabajador.apellido }}</a>
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

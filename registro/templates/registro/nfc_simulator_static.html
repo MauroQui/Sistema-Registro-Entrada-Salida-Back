@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Simulador NFC Estático</title>
+</head>
+<body>
+    <h1>Simulador NFC Estático</h1>
+    {% if trabajador %}
+        <p>Registro exitoso para el trabajador: {{ trabajador.nombre }} {{ trabajador.apellido }}.</p>
+    {% else %}
+        <p>No se encontró ningún trabajador para simular el registro.</p>
+    {% endif %}
+</body>
+</html>

@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalle de Trabajador</title>
+</head>
+<body>
+    <h1>Detalle de {{ trabajador.nombre }} {{ trabajador.apellido }}</h1>
+    <p>Cargo: {{ trabajador.cargo }}</p>
+    <p>Vigente: {{ trabajador.vigente }}</p>
+    <a href="{% url 'trabajadores' %}">Volver a la lista de trabajadores</a>
+</body>
+</html>
